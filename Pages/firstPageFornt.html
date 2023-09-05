@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="../Css/styleFirstPage.css">
     <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.css">
-
+<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 
@@ -22,6 +23,11 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css"
     integrity="sha512-3JRrEUwaCkFUBLK1N8HehwQgu8e23jTH4np5NHOmQOobuC4ROQxFwFgBLTnhcnQRMs84muMh0PnnwXlPq5MGjg=="
     crossorigin="anonymous" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-basic.css" />
+<!-- or -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/color-calendar/dist/css/theme-glass.css" />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 
 <style>
         .selector1 .select2-results__option {
@@ -135,12 +141,15 @@
         <div style="position: relative; color: white; font-weight: 600; margin: 30px;  font-family: 'Cairo';">
      <h2 class="head">
        Travel like experts with Offto
+
      </h2>
+    
+
      <p>Book your Flight ticket and hotels in easy way</p>
     </div>
    
 
-    <div class="content" style="margin-top: 30px; ">
+    <div class="content" style=" margin-top: 30px; ">
         <!-- style="width: 100px; left: 1000px;" -->
             <div class="card-container"  >
                 <div class="row justify-content-start">
@@ -155,16 +164,16 @@
             <div style="margin-top: 25px;">
                 <div class="row justify-content-start radioDiv">
                     <div class="col-1 form-check">
-                    <input type="radio" checked class="form-check-input" id="age1" name="age" value="30">
-                    <label for="age1" class="form-check-label age1">Round trip</label><br>
+                    <input type="radio" checked class="form-check-input" id="Form_forms1" name="Form_forms" value="Round trip">
+                    <label for="Form_forms1" class="form-check-label Form_forms1">Round trip</label><br>
                     </div>
                     <div class="col-1" style="padding-left: 10px;">
-                <input type="radio" class="form-check-input" id="age2" name="age" value="60">
-                <label for="age2" class="form-check-label age1">one way</label><br>
+                <input type="radio" class="form-check-input" id="Form_forms2" name="Form_forms" value="one way">
+                <label for="Form_forms2" class="form-check-label Form_forms2">one way</label><br>
                     </div>
                     <div class="col-1">
-                    <input type="radio" class="form-check-input" id="age3" name="age" value="100">
-                    <label for="age3" class="form-check-label age1">Multi city</label><br><br>
+                    <input type="radio" class="form-check-input" id="Form_forms3" name="Form_forms" value="Multi city">
+                    <label for="Form_forms3" class="form-check-label Form_forms3">Multi city</label><br><br>
                     </div>
                 </div>
 
@@ -190,7 +199,7 @@
                        </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row row-final">
                     <div class="col">
                 <!-- <div class="form-group ">                 -->
                     <!-- <div class="input-group "> -->
@@ -204,20 +213,24 @@
                     <!-- </div> -->
                     <!-- /.input group -->
                 <!-- </div> -->
-              
                 <div class=" date" id="reservationdate" data-target-input="nearest" >
-                    <p style="position: absolute; border-radius: 100%; width: 120px; margin-left: 50px; z-index: 9999; margin-top: -12px; background-color: white; font-weight: 600; color: rgb(153, 153, 153);">range of date</p>
-                    <div >  
+                    <div style="position: relative; ">  
+                     <p
+                        style="position: absolute; border-radius: 100%; width: 120px; margin-left: 50px; z-index: 9999; margin-top: -12px; background-color: white; font-weight: 600; color: rgb(153, 153, 153);">
+                    range of date</p>
+
                     <input type="text" class=" datetimepicker-input input-date" style="width: 400px; font-family: Times, Arial, sans-serif;" data-target="#reservationdate"  />
                         <i class="fas fa-calendar-alt fa-lg"
                             style="color: #575f6b;position: absolute; z-index:999; margin-left: -30px; margin-top: 18px;"></i>
                 </div>
-                    <!-- <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                    </div> -->
+             
                 </div>
+                    <!-- <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div> -->
                     </div>
                     <div class="col-1">
+                        
                         
                     </div>
                     <div class="col ">
@@ -232,13 +245,13 @@
                                     <span >Infant </span>
                                     <span>On </span>
                                     <span class="classes">economy</span>
-                                    <div class="dropdown-passenger-content">
+                                    <div class="dropdown-passenger-content" >
                                       
-                        <div class="container-down-passenger" style="font-size:15px ; font-family:'Cairo'; height: 40px; ">
-                            <div style="text-align: start; ">
-                            <h4>Passenger</h4>
-                            </div>
-                        </div>
+                                        <div class="container-down-passenger" style="font-size:15px ;display: block;  font-family:'Cairo'; height: 40px; ">
+                                            <div style="text-align: start; ">
+                                            <h4>Passenger</h4>
+                                            </div>
+                                        </div>
 
                                                 <div class="container-down-passenger" style="font-size:15px ; font-family:'Cairo';  ">
                                                     <div class="row">
@@ -278,8 +291,7 @@
                                                         </div>
                                                         <div class="col-1 minus-button" id="minus-2" style=" width: 10.333333%; color: rgb(245, 123, 123);">
                                                             <i class="fas fa-minus"></i>
-                                                        </div>
-                                                
+                                                        </div>                                 
                                                     </div>
                                                 </div>
 
@@ -288,9 +300,8 @@
                                                         <div class="col" style="text-align: start;">
                                                             <h3 style="font-size:20px">Infant</h3>
                                                             <p style="color:#b4b4b4;">Less than 2 years</p>
-                                                
-                                                        </div>
-                                                
+
+                                                        </div>                                               
                                                         <div class="col-1 plus-button" id="plus-3" style=" width: 10.333333%;">
                                                             <i class="fas fa-plus" style="color: rgb(95, 95, 243);"></i>
                                                         </div>
@@ -318,13 +329,12 @@
                                             <div class="col-4">
                                                 <div class="class first"><i class="fas fa-door-open fa-lg"></i> First</div>
                                             </div>
-                                           
+
                                             </div>
-
-
                                         </div>
+
                                     </div>
-                                <span>  </span>
+  
                                 <!-- <img src="../Images/arrow-down.png" width="20px" alt=""
                                     style="  position: absolute;  font-size: 10px; right: 10px; " srcset=""> -->
                                 <svg class="svg-inline--fa fa-angle-down arrow-click arrow-passenger"
@@ -335,293 +345,54 @@
                                     </path>
                                 </svg>
                                 </div>
+                             </div>
+
+                            <div class="row append-form" style="margin: 20px 15px">
+                            </div>
+                    <div class="row" style="margin: 4px 80px">
+                        <div class="col justify-content-start  class-append">
+                    
+                        </div>
+                        <div class="col-4 text-right">
+                            <div href="#" class="loginbtn">
+                                <!-- <i class="fa visible-xs"></i> -->
+                                <span>Submit</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+             
             </div>
             </div>
 
-            
+
 </div>
 
 <!-- Footer -->
 
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="container">
         <div style="width: 40%;">
         <p>All rights reserved &copy; Offto 2023.</p>
         </div>
         <div style="text-align: end;">
-            <!-- <img src="" alt="K">
-             -->
+          <img src="" alt="K">
+          
             <img src="../Images/Mastercards.png" width="5%" alt="Master Card">
             <img src="../Images/visa.jpg" width="5%" alt="Visa">
         </div>
     </div>
-</footer>
+</footer> -->
 
 <!-- Include Bootstrap JS (Popper.js and Bootstrap JS) -->
-   <script>
-     
-
-
-     $(document).ready(function () {
-       
-            $('.card-container').css({ width:'92%', borderRadius: 90 })
-              .animate({ width: '100%', borderRadius:20 }, 900);
-            $('.FormButton').css({top :'-20px'})
-            .animate({ top: '40px' }, 900);
-            
-            });
-
-    $(document).ready(function () {
-        const rotateImage = $('.arrow-click');
-        let rotationDegree = 0;
-
-        function rotate() {
-            rotationDegree += 180; // Adjust the angle as needed
-            rotateImage.css({transform: `rotate(${rotationDegree}deg)`});
-        }
-
-       $('.arrow-passenger').on('click', rotate);
-    });
-
-    
-
-    var state = [
-            {
-                fullName: "Kuwait",
-                 desc: "country",
-                iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/1280px-Flag_of_Kuwait.svg.png",
-                id: 10300
-            },
-            {
-                fullName: "Kanada",
-                desc : "country",
-                iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1280px-Flag_of_Canada_%28Pantone%29.svg.png",
-                id: 10302
-            }
-        ];
-
-            var state2 = [
-                    {
-                        fullName: "Kanada",
-                        desc: "country",
-                        iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Canada_%28Pantone%29.svg/1280px-Flag_of_Canada_%28Pantone%29.svg.png",
-                        id: 10310
-                    },
-                    {
-                        fullName: "Kuwait",
-                        desc: "country",
-                        iconUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/1280px-Flag_of_Kuwait.svg.png",
-                        id: 10320
-                    }
-                ];
-                
-
-    function formatState(state) {
-        // console.log(state);
-        if (!state.id) {
-            return state.fullName;
-        }
-          var baseUrl = "http://localhost:2990/jira/secure/projectavatar?size=xsmall"; // Correct the base URL
-
-        var $state = $(
-            // '<div class="container"> <div class="row"><img src="' + state.iconUrl + '" class="img-flag" width = "40px" style = "border-radius : 100%"/> <h3>' + state.fullName + '</h3> <p>'+ state.desc +'</p><div class="row" ><div>'
-                `<div class="container container-down" style = "font-size:15px ; font-family:'Cairo';  ">
-                    <div class="row"  >
-                        <div class="col"  >
-                           <img src="${state.iconUrl }" class="img-flag" width = "60px" height="60px"   style = "  border: 2px solid #f1f1f1;
-background-color: rgba(0, 0, 0, 0.9); border-radius : 100px ;"/>
-                      
-                        </div>
-                        <div class="col-7">
-                            <h3 style = "font-size:20px">${state.fullName }</h3>
-                           <p style = "color:#d3d3d3;">${state.desc }</p>
-                        </div>
-                        <div class="col" >
-                          <p class="" style ="text-algin:center; margin-top:14px;">${state.desc }</p>
-                        </div>
-                    </div>
-                    </div>`
-        );
-        
-        return $state;
-    };
-  
-    $(".selector1").select2({
-        data: state,
-        // placeholder:"from",
-        minimumResultsForSearch: Infinity,
-        templateResult: formatState,
-         templateSelection: function (selected) {
-          return selected;
-            // $('span .select2-selection__rendered').eq(0).append('<img src="' + selected.iconUrl + '" width="50px" style="border-radius:100px;"> ' + selected.fullName);
-        },
-    });
-
-       $(".selector2").select2({
-            data: state2,
-            //  placeholder: "to",
-            minimumResultsForSearch: Infinity,
-            templateResult: formatState,
-            templateSelection: function (selected) {
-                return selected;
-           },
-         });
-
-        $(document).ready(function () {
-                $('#reservationdate').daterangepicker({
-                format: 'L',
-                drops:"up"
-            }, function (start, end, label) {
-                    // This function will be called when the user applies a date range
-                    var startDate = start.format('YYYY-MM-DD');
-                    var endDate = end.format('YYYY-MM-DD');
-
-                    console.log('Selected start date: ' + startDate);
-                    console.log('Selected end date: ' + endDate);
-                   $('.input-date').val(startDate + ' to '+endDate );
-                    // You can use the startDate and endDate variables as needed
-                });
-            });
-
-    $('b[role="presentation"]').hide();
-    $('.select2-selection__arrow').append('<i class="fa fa-angle-down"></i>');
-    $('document').ready(function () {
-        
-        $(document).ready(function () {
-            $('.select2-container--default .select2-selection--single').css({ "background-color": "white", "height": "55px", 'font-size': "22px", 'padding-top': '10px' , 'border-radius': "13px" , 'opacity' :" 0.9" , 'border' :'1px solid black'});
-            $('.select2-selection__arrow').css({ 'font-size': "19px", 'padding-right': '30px', 'padding-top': '10px' });
-            $('.selection').css({'padding-right': '30px', 'padding-top': '10px' ,'border-radius':'100px' , 'color' :'#999' });
-            $('.select2-selection__placeholder').eq(0).text('From');
-            $('.select2-selection__placeholder').eq(1).text('To');
-            $('.select2-selection').eq(0).append('<p style="margin-top:-20px; margin-left:20px; width:40px;padding:0px;background-color:white; z-index:999;border-radius:100px ;font-size:15px">From</p>');
-            $('.select2-selection').eq(1).append('<p style="margin-top:-20px; margin-left:20px; width:40px;padding:0px;background-color:white; z-index:999;border-radius:100px ;font-size:15px">To</p>');
-            $('.input-date').css({'text-align':'center' , 'padding':'10px', 'font-size' : '22px' , 'color' : "rgb(114 112 112)" });
-            $('.arrow-passenger').click(function () {
-                $(".dropdown-passenger-content").slideToggle("fast");
-                // $(".dropdown-passenger-content").
-            });
-                   $('.switch-Button').click(function () {
-                 let select1 =  $('.select2-selection__rendered').eq(0).html();
-                 let select2 =  $('.select2-selection__rendered').eq(1).html();
-                 
-                 $('.select2-selection__rendered').eq(0).html(select2);
-                  $('.select2-selection__rendered').eq(1).html(select1);
-            });
-
-           
-       
-        });
-    });
-        $(document).ready(function () { 
-                $('.container-down').slideDown();
-        });
-
-        $(".selector1, .selector2").on("select2:select", function (e) {
-                var selected = e.params.data;
-                var imageUrl = selected.iconUrl;
-            let fullName = selected.fullName;
-                // var $selectedImage = $('<img src="' + imageUrl + '" width="50px" style="border-radius: 100px;">');
-                $(this).siblings(".select2").find(".select2-selection__rendered").append('<img src="' + imageUrl + '" width="30px" height="30px" style="border-radius: 100px; margin-top:-7px; border:2px solid #b9b7b7;"> ' + fullName );
-
-                // Scroll to the end of the input area
-             var inputContainer = $(this).siblings(".select2").find(".select2-selection__rendered");
-                inputContainer.animate({ scrollLeft: inputContainer.prop("scrollWidth") }, "slow");
-           });
-         
-
-            $('.plus-button').click(function () {
-                // console.log($(this).attr('id'));
-              let Adult_degree = parseInt($('span.Adult-degree').text()) ?? 0;
-              let Child_degree = parseInt($('span.Child-degree').text()) ?? 0;
-              let Infant_degree = parseInt($('span.Infant-degree').text()) ?? 0;
-                let name_span = $(this).attr('id');
-                switch (name_span) {
-                    case 'plus-1':
-                        Adult_degree +=1; 
-                        console.log($('div~div span.Adult-degree').html);
-                        $('span.Adult-degree').text(Adult_degree <= 10 ? Adult_degree : 0);
-                        $('span.Adult-degree-input').text(Adult_degree <= 10 ? Adult_degree : 0);
-                       
-                        break;
-                    case 'plus-2':
-                        Child_degree += 1;
-                        $('span.Child-degree').text(Child_degree  <= 10 ? Child_degree : 0);
-                        $('span.Child-degree-input').text(Child_degree <= 10 ? Child_degree : 0);
-
-                        break;
-                    case 'plus-3':
-                        Infant_degree += 1;
-                        $('span.Infant-degree').text(Infant_degree <= 10 ? Infant_degree : 0);
-                         $('span.Infant-degree-input').text(Infant_degree <= 10 ? Infant_degree : 0);
-                       break;               
-                    default:
-                        break;
-                }
-            });
-
-
-            $('.minus-button').click(function () {
-                let Adult_degree = parseInt($('span.Adult-degree').text()) ?? 0;
-                let Child_degree = parseInt($('span.Child-degree').text()) ?? 0;
-                let Infant_degree = parseInt($('span.Infant-degree').text()) ?? 0;
-                let name_span = $(this).attr('id');
-                switch (name_span) {
-                    case 'minus-1':
-                        Adult_degree -= 1;
-                        $('span.Adult-degree').text(Adult_degree <= 0 ? 0 : Adult_degree);
-                        $('span.Adult-degree-input').text(Adult_degree <= 0 ? 0 : Adult_degree);
-
-                        break;
-                    case 'minus-2':
-                        Child_degree -= 1;
-                        $('span.Child-degree').text(Child_degree <= 0 ? 0 : Child_degree );
-                           $('span.Child-degree-input').text(Child_degree <= 0 ? 0 : Child_degree);
-
-                        break;
-                    case 'minus-3':
-                        Infant_degree -= 1;
-                        $('span.Infant-degree').text(Infant_degree <= 0 ? 0 : Infant_degree);
-                       $('span.Infant-degree-input').text(Infant_degree <= 0 ? 0 : Infant_degree);
-
-                        break;
-                    default:
-                        break;
-                }
-            });
-            
-          
-        $(document).ready(function () {
-            $('.class').click(function () { 
-                  let name_class = $(this).attr('class');
-                  let class_click  = name_class.split(' ')[1];
-                  let class_val = class_click == 'economy' ? 'economy' : class_click == 'business' ? 'business' : class_click=='first' ? 'first': 'non define';
-                  $('.classes').text(class_val);
-             })
-        });
-     
-        $(function () {
-            $(".state").click(function () { 
-                $('.span-state').html($(this).html());
-             });
-               $(".currency").click(function () {
-                $('.span-currency').html($(this).html());
-            });
-            $(".language").click(function () {
-                $('.span-language').html($(this).html());
-            });       
-        });
-
-        // state
-        //     currency
-        //     language
-    </script>
-
+<script src="../JQuery/FirstPage.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../fontawesome/js/all.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/daterangepicker@3.1.0/daterangepicker.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/color-calendar/dist/bundle.js"></script>
 
 </body>
 </html>

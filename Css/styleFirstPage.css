@@ -7,7 +7,7 @@ body {
     /* font-family: 'cairo'; */
     font-style: inherit;
     background: url('../Images/airPlan.jpg') center/cover fixed no-repeat;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
         @font-face {
@@ -17,8 +17,8 @@ body {
             font-style: normal;
         }
 .overlay {
-    
     position: absolute;
+    overflow: auto;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,6 +32,7 @@ body {
 
 .content {
     position: relative;
+
     z-index: 1;
     padding: 20px;
     text-align: center;
@@ -44,10 +45,13 @@ body {
     width: 100%;
     color: white;
     margin: auto;
+    z-index: 999999;
 }
 
 .footer .container {
+    z-index: 999999;
     display: flex;
+ 
     justify-content: space-between;
 
 }
@@ -166,12 +170,15 @@ div .radioDiv > .col-1{
 .card-container {
     border-radius: 100px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    max-width: 100%;
+    /* max-width: 100%; */
     width: 100%;
     padding: 20px;
-    height: 300px;
+    min-height: 300px;
+    
     border: 3px solid #f1f1f1;
     background-color: #fcfcfc;
+     /* overflow: scroll; */
+/* position: relative; */
 }
 .FormButton{
         border: 3px solid #f1f1f1;
@@ -182,6 +189,7 @@ div .radioDiv > .col-1{
     font-size: large !important;
     font-family: 'Cairo';
     border-radius: 15px;
+    /* z-index: 99999; */
     width: 150px;
     padding: 15px;
 }
@@ -288,7 +296,7 @@ select::-ms-expand {
 }
 
 
-.input-date {
+.input-date , .input-date-additional {
 background-color:  white; 
 height:55px;
  font-size: 22px; 
@@ -323,6 +331,10 @@ border-radius: 13px ;
     width: 400px;
     padding: 10px;
 }
+.input-date-additional{
+    width: 300px;
+        padding: 10px;
+}
 
 /* Adjust the position of the calendar icon */
 .input-group-append {
@@ -330,7 +342,7 @@ border-radius: 13px ;
     /* Adjust this value as needed */
 }
 
-.dropdown-passenger{
+.dropdown-passenger , .dropdown-addional{
     position: relative;
         display: inline-block;
         /* margin-right: 20px; */
@@ -344,7 +356,11 @@ border-radius: 13px ;
         font-family: 'Cairo';
         border-radius: 13px;
 }
-.dropdown-passenger:hover {
+
+.dropdown-addional{
+    width: 300px;
+}
+/* .dropdown-passenger:hover { */
     /* backdrop-filter: blur(100px); */
     /* content: ""; */
     /* left: 0; */
@@ -354,8 +370,8 @@ border-radius: 13px ;
     /* z-index: -1; */
     /* transition: 0.8s; */
 
-}
-.dropdown-passenger-content{
+/* } */
+.dropdown-passenger-content ,.dropdown-additional-content{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
            overflow: auto;
            border-radius: 10px;
@@ -385,11 +401,28 @@ border-radius: 13px ;
 
  }
 
+ .dropdown-additional-content {
+    color: black;
+        padding: 1px 1px;
+        text-decoration: none;
+        display: none;
+        /* display: block; */
+        /* border-radius: 10px; */
+ }
+ .option-additional-row:hover{
+    
+    background:#eeeeef ;
+  
+ }
+ /* .dropdown-additional-content .container-down-passenger{
+
+ } */
+
  .dropdown-passenger-content a:hover {
      background-color: #f1f1f1;
  }
 
- .plus-button{
+ .plus-button , .plus-button-append{
     /* height: 20px; */
     padding: 10px;
     height: 40px;
@@ -397,7 +430,7 @@ border-radius: 13px ;
     border-radius: 100px;
     
  }
-  .minus-button{
+  .minus-button , .close-button-append{
         /* height: 20px; */
         padding: 10px;
         height: 40px;
@@ -405,20 +438,21 @@ border-radius: 13px ;
         border-radius: 100px;
 
     }
-           .plus-button:hover {
+           .plus-button:hover ,
+        .plus-button-append:hover {
             cursor : pointer !important;
             background-color: rgb(188, 188, 240);
             box-shadow: 2px 3px rgb(191, 191, 204);
 
            }
                    
-            .minus-button:hover{
+            .minus-button:hover , .close-button-append:hover{
             cursor: pointer !important;
             background-color: rgb(240, 171, 171);
             box-shadow: 2px 3px rgb(187, 178, 178);
             }
 
-              .plus-button:active ,.minus-button:active{
+              .plus-button:active ,.minus-button:active , .plus-button-append:active , .close-button-append:active{
                 box-shadow: 0px 0px;
             -webkit-user-select: none;
                 -khtml-user-select: none;
@@ -474,3 +508,12 @@ border-radius: 13px ;
     box-shadow: 0px 0px;
 }
 
+.additional-input{
+    background-color: white;
+    height: 55px;
+    font-size: 22px;
+    padding-top: 10px;
+    border-radius: 13px;
+    opacity: 0.9;
+    border: 1px solid black;
+}
