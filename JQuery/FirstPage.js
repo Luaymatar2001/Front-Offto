@@ -296,7 +296,7 @@ const OnWay =  function () {
                     }
             
                 
-               $('.dropdown-addional0').eq(0).text($('.select2-selection__rendered').text());
+               $('.dropdown-addional0').eq(0).text($('.select2-selection__rendered').eq(1).text());
 
 
                 $(`.append-form`).on('click', `.option-additional-row`, function () {
